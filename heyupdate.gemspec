@@ -9,9 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["rkcudjoe"]
   spec.email         = ["rkcudjoe@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby API wrapper for the HeyUpdate API v1}
+  spec.homepage      = "https://heyupdate.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -30,4 +29,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "vcr", "~> 3.0", ">= 3.0.3"
+  spec.add_development_dependency "dotenv", "~> 2.1"
+  spec.add_development_dependency "pry", "~> 0.10.3"
+
+  spec.add_runtime_dependency "faraday", "~> 0.9.2"
+  spec.add_runtime_dependency 'faraday_middleware', '~> 0.10.0'
+  spec.add_runtime_dependency "json", "~> 1.8", ">= 1.8.3"
 end
