@@ -20,6 +20,12 @@ class Heyupdate::Client
           expect(@client.post_update("I wrote a blog post on Angular today")).to be_an_instance_of(Hash)
         end
       end
+
+      it "returns the newly created update" do
+        VCR.use_cassette 'updates/post_update' do
+          expect(@client.post_update("I wrote a blog post on Angular today")["message"]).to eq("I wrote a blog post on Angular today")
+        end
+      end
     end
 
     describe "#edit_update" do
