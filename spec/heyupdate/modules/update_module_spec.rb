@@ -14,5 +14,13 @@ class Heyupdate::Client
       end
     end
 
+    # describe "#post_update" do
+    #   it "posts a new update" do
+    #     VCR.use_cassette 'updates/post_update' do
+    #       expect(@client.post_update("I wrote a blog post on Angular today")).to be_an_instance_of(Hash)
+    #     end
+    #   end
+    # end
+
   end
 end
