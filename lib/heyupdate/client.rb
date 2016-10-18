@@ -1,6 +1,7 @@
 Dir[File.join(__dir__, 'modules', '*.rb')].each {|file| require file }
 
 class Heyupdate::Client
+  include Update
 
   attr_reader :auth_token
 
