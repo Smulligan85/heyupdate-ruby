@@ -6,7 +6,7 @@ require 'heyupdate/version'
 Gem::Specification.new do |spec|
   spec.name          = "heyupdate-ruby"
   spec.version       = Heyupdate::VERSION
-  spec.authors       = ["rkcudjoe"]
+  spec.authors       = ["Raymond Cudjoe, Sean Mulligan"]
   spec.email         = ["rkcudjoe@gmail.com"]
 
   spec.summary       = %q{Ruby API wrapper for the HeyUpdate API v1}
