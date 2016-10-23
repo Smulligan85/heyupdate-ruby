@@ -20,13 +20,20 @@ class Heyupdate::Client
 
   def connection
    @connection ||= Faraday.new do |req|
-      req.url_prefix = "https://api.heyupdate.com"
       req.adapter :net_http
+      req.url_prefix = "https://api.heyupdate.com"
 
       req.headers['Content-Type'] = "application/json"
       req.headers['User-Agent'] = "HeyUpdate-Ruby v#{Heyupdate::VERSION}"
+      req.headers['Accept'] = "*/*"
       req.headers['Authorization'] = "Bearer #{auth_token}"
+      req.response :json, content_type: /\bjson$/
     end
+  end
+
+  def parse_response(response)
+    responses = [200, 201, 400, 401, 403, 404, 406, 409, 429, 500, 502, 503]
+    responses.include?(response.status) ? response.body : "Unexpected Error from heyupdate-ruby"
   end
 
 end
