@@ -3,8 +3,8 @@ class Heyupdate::Client
   module Update
 
     def updates
-      updates = connection.get("/updates").body
-      JSON.parse(updates)
+      updates = connection.get("/updates")
+      parse_response(updates)
     end
 
     def post_update(message, options={})
@@ -13,7 +13,7 @@ class Heyupdate::Client
         req.body = "{\"message\": \"#{message}\"}"
         req.params['timestamp'] = options[:timestamp] unless options[:timestamp].nil?
       end
-      JSON.parse(update.body)
+      parse_response(update)
     end
 
     def edit_update(update_id, message=nil, timestamp=nil)
@@ -21,7 +21,7 @@ class Heyupdate::Client
         req.body = "{\"message\": \"#{message}\"}"
         req.params['timestamp'] = timestamp unless timestamp.nil?
       end
-      JSON.parse(update.body)
+      parse_response(update)
     end
 
   end
