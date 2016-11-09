@@ -31,7 +31,7 @@ HeyUpdate client has the following methods:
 | **Update**                               |                   					                             |
 | Retrieve all update data          	     | `#updates`                         |
 | Post a new update         	             | `#post_update(message, options={})` |
-| Edit an existing update   	             | `#edit_update(update_id,message=nil,timestamp=nil)` |
+| Edit an existing update   	             | `#edit_update(update_id,message=nil,timestamp=nil)`  |
 
 ## Usage Examples
 
