@@ -1,8 +1,6 @@
-# Heyupdate
+# HeyUpdate Ruby Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/heyupdate`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby toolkit for [HeyUpdate]() API
 
 ## Installation
 
@@ -22,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Call for the HeyUpdate API are relative to the base url
+[https://api.heyupdate.com](https://api.heyupdate.com)
+
+API actions are available as methods on the client object. Currently, the
+HeyUpdate client has the following methods:
+
+| Action               	                   | Method             					                           |
+|:-----------------------------------------|:--------------------------------------------------------|
+| **Update**                               |                   					                             |
+| Retrieve all update data          	     | `#updates`                         |
+| Post a new update         	             | `#post_update(message, options={})` |
+| Edit an existing update   	             | `#edit_update(update_id,
+message=nil, timestamp=nil)`               |
+
 
 ## Development
 
@@ -38,4 +49,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
