@@ -74,7 +74,7 @@ heyupdate_client.post_update("I wrote a blog post on Angular today")
         wrote a blog post on Angular today"}
 ```
 
-** You can edit an existing update**
+**You can edit an existing update**
 
 ```ruby
 heyupdate_client.edit_update("67007", "I updated my Angular 2 blog post")
@@ -97,7 +97,7 @@ To release a new version, update the version number in `version.rb`, and then ru
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/heyupdate. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-1. Fork it [https://github.com/hookengine/heyupdae-ruby/fork](https://github.com/hookengine/heyupdae-ruby/fork)
+1. Fork it [https://github.com/hookengine/heyupdate-ruby/fork](https://github.com/hookengine/heyupdate-ruby/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
